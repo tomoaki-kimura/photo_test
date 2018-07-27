@@ -7,7 +7,8 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @user.image %>
+  <%= @user.image %><br>
+  <%= image_tag @user.try!(:image) %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
